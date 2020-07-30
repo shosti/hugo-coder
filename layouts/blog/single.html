@@ -31,13 +31,14 @@
 
 
       <footer>
-        {{ partial "posts/series.html" . }}
-        {{ partial "posts/disqus.html" . }}
-        {{ partial "posts/commento.html" . }}
-        {{ partial "posts/utteranc.html" . }}
+        {{ partial "share-buttons.html" . }}
+        {{ partial "blog/series.html" . }}
+        {{ partial "blog/disqus.html" . }}
+        {{ partial "blog/commento.html" . }}
+        {{ partial "blog/utteranc.html" . }}
       </footer>
     </article>
 
-    {{ partial "posts/math.html" . }}
+    {{ partial "blog/math.html" . }}
   </section>
 {{ end }}

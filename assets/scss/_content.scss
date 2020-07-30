@@ -60,6 +60,22 @@
     font-size: 1.6rem;
     margin: 0;
   }
+  .share-buttons {
+    color: $muted-color;
+    font-family: $heading-font-family;
+    font-weight: bold;
+    font-size: 1.7rem;
+    a {
+        color: $muted-color;
+        margin-left: 0.5rem;
+        margin-right: 0;
+        &:hover,
+        &:focus {
+            color: $fg-color;
+            text-decoration: none;
+        }
+    }
+  }
 }
 
 .avatar img{

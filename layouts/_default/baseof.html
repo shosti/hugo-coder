@@ -99,6 +99,8 @@
       {{ partial "footer.html" . }}
     </main>
 
+    <script src="{{ relURL "/js/smartquotes.js" }}"></script>
+    <script type="application/javascript">smartquotes();</script>
     {{ range .Site.Params.custom_js }}
       <script src="{{ . | relURL }}"></script>
     {{ end }}

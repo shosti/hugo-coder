@@ -5,12 +5,13 @@
     {{ $name := . | urlize }}
     {{ $series := index $.Site.Taxonomies.series $name }}
     {{ if gt (len $series.Pages) 1 }}
-      <h3>See also in {{ . }}</h3>
+      <h4>Read the whole <em>{{ . }}</em> series</h4>
       <nav>
         <ul>
-        {{ $maxItems := $.Site.Params.maxSeeAlsoItems | default 5 }}
-        {{ range first (add $maxItems 1) $series.Pages }}
-          {{ if ne .RelPermalink $currentPageUrl }}
+        {{ range $series.Pages.Reverse }}
+          {{ if eq .RelPermalink $currentPageUrl }}
+            <li><strong>{{ .Title }} (this post)</strong></li>
+          {{ else }}
             <li>
               <a href="{{ .Params.ExternalLink | default .RelPermalink }}">{{ .Title }}</a>
             </li>

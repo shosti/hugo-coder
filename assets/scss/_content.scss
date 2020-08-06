@@ -76,6 +76,13 @@
         }
     }
   }
+  .footnote-body {
+      display: inline;
+      p {
+          display: inline;
+          font-size: 1.5rem;
+      }
+  }
 }
 
 .avatar img{

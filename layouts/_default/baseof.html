@@ -106,6 +106,7 @@
     {{ end }}
 
     {{ template "_internal/google_analytics.html" . }}
+    {{- partial "analytics/social" . -}}
 
     {{ if and .Site.Params.fathomAnalytics .Site.Params.fathomAnalytics.siteID }}
       {{- partial "analytics/fathom" . -}}

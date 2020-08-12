@@ -1,0 +1,19 @@
+<script>
+  if (typeof ga === "function") {
+    function addShareTrack(id, network) {
+      var elem = document.getElementById(id);
+      if (!elem) {
+        return;
+      }
+
+      elem.onclick = function(e) {
+        ga('send', 'social', network, 'Share', window.location);
+      }
+    }
+
+    addShareTrack('share-hn', 'HN');
+    addShareTrack('share-twitter', 'Twitter');
+    addShareTrack('share-linkedin', 'LinkedIn');
+    addShareTrack('share-reddit', 'Reddit');
+  }
+</script>

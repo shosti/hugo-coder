@@ -93,4 +93,16 @@
       }
     }
   }
+  .popout-button {
+      display: inline;
+      background-color: $link-color;
+      color: $bg-color;
+      padding: 7px;
+      border-radius: 7px;
+      box-shadow: 3px 3px 3px grey;
+      &:hover,
+      &:focus {
+          box-shadow: none;
+      }
+  }
 }
